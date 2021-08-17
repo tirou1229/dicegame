@@ -13,7 +13,7 @@
         <meta name="Author" content="Sadayen Vellen" />
         <meta property="og:type" content="website" />
 
-        
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,600" rel="stylesheet" type="text/css">        
 
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
@@ -23,13 +23,13 @@
             <ion-content class="background"> <!--Add background class-->
                 <ion-grid>
 
-                    <ion-row>
+                    <!-- <ion-row>
                         <ion-col> 
-                            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button> <!-- New game button -->
+                            
                         </ion-col>
-                    </ion-row>
+                    </ion-row> -->
 
-                    <ion-row> <!-- set player -->
+                    <ion-row class="wrapper clearfix"> <!-- set player -->
                         <ion-col> <!-- set player 1-->
                             <div class="player1">
                                 <div class="playername" id="player1">Player 1</div>
@@ -51,6 +51,15 @@
                             </div>
                         </ion-col>
                     </ion-row>
+                    <ion-row>
+                        <ion-col> 
+                            <button class="new"><i class="ion-ios-plus-outline"></i>New game</button> <!-- New game button -->
+                            <button class="roll"><i class="ion-ios-loop"></i>Roll dice</button>
+                            <button class="hold"><i class="ion-ios-download-outline"></i>Hold</button>
+                        </ion-col>
+                    </ion-row>
+
+                    <img src="images/dice-5.png" alt="Dice" class="dice" id="dice-1">
 
                 </ion-grid>
             </ion-content>
