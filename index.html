@@ -11,11 +11,53 @@
         <meta name="robots" content="index,follow" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="Author" content="Sadayen Vellen" />
-        <meta property="og:type" content="website" />*
+        <meta property="og:type" content="website" />
+
+        
 
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
     </head>
     <body>
+        <ion-app>
+            <ion-content class="background"> <!--Add background class-->
+                <ion-grid>
+
+                    <ion-row>
+                        <ion-col> 
+                            <button class="btn-new"><i class="ion-ios-plus-outline"></i>New game</button> <!-- New game button -->
+                        </ion-col>
+                    </ion-row>
+
+                    <ion-row> <!-- set player -->
+                        <ion-col> <!-- set player 1-->
+                            <div class="player1">
+                                <div class="playername" id="player1">Player 1</div>
+                                <div class="score" id="score1">43</div>
+                                <div class="current-score">
+                                    <div class="current">Current</div>
+                                    <div class="currentscore" id="current1">11</div>
+                                </div>
+                            </div>
+                        </ion-col>
+                        <ion-col> <!-- set player 2 -->
+                            <div class="player2">
+                                <div class="playername" id="player2">Player 2</div>
+                                <div class="score" id="score2">72</div>
+                                <div class="current-score">
+                                    <div class="current">Current</div>
+                                    <div class="currentscore" id="current2">0</div>
+                                </div>
+                            </div>
+                        </ion-col>
+                    </ion-row>
+
+                </ion-grid>
+            </ion-content>
+        </ion-app>
+
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+        <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
         <script type="javascript" src="script.js"></script>
     </body>
 </html>
