@@ -1,4 +1,14 @@
-let activetab, scorefinal, currentscore, dice;
+let activetab, scorefinal, currentscore, dice, play;
+
+$(document).ready(function(){
+    $('.roll').on('click' , function(){
+            dice = Math.floor(Math.random() * 6) + 1;    
+            $("img").attr("src", "images/dice-" + dice + ".png");                
+    });
+});
+
+
+
 
 //function to know how's next
 function nextplayer(){
