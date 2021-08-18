@@ -65,7 +65,7 @@ ion-content{
     margin: 0 auto;
     padding: 12px;
     text-align: center;    
-    margin-top: 280px;
+    margin-top: 180px;
 }
 
 .current {
@@ -111,7 +111,7 @@ button:focus {
     outline: none;
 }
 
-i {
+.ion-icon {
     color: #EB4D4D;
     display: inline-block;
     margin-right: 15px;

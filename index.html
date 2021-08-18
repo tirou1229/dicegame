@@ -17,6 +17,9 @@
 
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css"/>
+
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
     </head>
     <body>
         <ion-app>
@@ -53,9 +56,9 @@
                     </ion-row>
                     <ion-row>
                         <ion-col> 
-                            <button class="new"><i class="ion-ios-plus-outline"></i>New game</button> <!-- New game button -->
-                            <button class="roll"><i class="ion-ios-loop"></i>Roll dice</button>
-                            <button class="hold"><i class="ion-ios-download-outline"></i>Hold</button>
+                            <button class="new"><span class="iconify ion-icon" data-icon="ion:add-circle-outline"></span>New game</button> <!-- New game button -->
+                            <button class="roll"><span class="iconify ion-icon" data-icon="fe:loop"></span>Roll dice</button> <!-- Roll dice button -->
+                            <button class="hold"><span class="iconify ion-icon" data-icon="bi:box-arrow-in-down"></span>Hold</button> <!-- stop button -->
                         </ion-col>
                     </ion-row>
 
@@ -67,6 +70,7 @@
 
         <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
         <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+        <script src="https://code.iconify.design/2/2.0.3/iconify.min.js"></script>
         <script type="javascript" src="script.js"></script>
     </body>
 </html>
