@@ -1,11 +1,32 @@
-let activetab, scorefinal, currentscore, dice, play;
+let activetab, score, currentscore, currentdice, dice, hold, finalscore;
 
-$(document).ready(function(){
+
+    $('.new').click(reset);
+
     $('.roll').on('click' , function(){
-            dice = Math.floor(Math.random() * 6) + 1;    
-            $("img").attr("src", "images/dice-" + dice + ".png");                
-    });
-});
+                dice = Math.floor(Math.random() * 6) + 1;    
+            $("img").attr("src", "images/dice-" + dice + ".png");   
+            
+                if (dice !== 1){
+                    currentdice = parseInt($('#current' + activetab).text());
+                    currentscore = dice + currentdice;
+                    $('#current' + activetab).text(currentscore);
+                    
+                }
+                else{
+                    nextplayer();
+                }
+            });
+
+    $('.hold').on('click', function(){
+        
+        hold = parseInt($('#score'+ activetab).text());
+        score = currentscore + hold;
+        $('#score' + activetab).text(score);
+        nextplayer();
+            
+    })
+
 
 
 
@@ -13,31 +34,31 @@ $(document).ready(function(){
 //function to know how's next
 function nextplayer(){
 
-    // set ternary operator
-
-    activetab === 0 ? activetab = 1 : activetab = 0;
-
-    // initiate currentplayer
-
     currentscore = 0;
 
-    // set current tab to 0
+    // set ternary operator
 
-    $("#current1").text("0");
-    $("#current2").text("0");
-
-    //add a class on the side of the game
-
-    $(".player1").addClass("activeplayer");
-    $(".player2").addClass("activeplayer");
+    activetab === 1 ? activetab = 2 : activetab = 1;
+    if(activetab == 1){
+        $("#active").addClass("activeplayer");
+        $("#active1").removeClass("activeplayer");
+        $(".info-text1").text("Player 1 turn");
+        $(".info-text2").empty();
+        $("#current2").text("0");
+    }
+    else{
+        $("#active").removeClass("activeplayer");
+        $("#active1").addClass("activeplayer");
+        $(".info-text2").text("Player 2 turn");
+        $(".info-text1").empty();
+        $("#current1").text("0");
+    }  
+   
 }
 
 // function to reset the game
 
 function reset(){
-    activetab = 0;
-    scorefinal = [0,0];
-    currentscore = 0;
 
     $("#score1").text("0");
     $("#score2").text("0");
@@ -47,6 +68,9 @@ function reset(){
 
     $(".player1").removeClass("activeplayer");
     $(".player2").removeClass("activeplayer");
+
+    $(".info-text1").empty();
+    $(".info-text2").empty();    
 
 }
 

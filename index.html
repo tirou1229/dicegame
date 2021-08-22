@@ -33,17 +33,17 @@
                     </ion-row> -->
 
                     <ion-row class="wrapper clearfix"> <!-- set player -->
-                        <ion-col> <!-- set player 1-->
+                        <ion-col class="activeplayer" id="active"> <!-- set player 1-->
                             <div class="player1">
                                 <div class="playername" id="player1">Player 1</div>
                                 <div class="score" id="score1">43</div>
                                 <div class="current-score">
                                     <div class="current">Current</div>
-                                    <div class="currentscore" id="current1">11</div>
+                                    <div class="currentscore" id="current1" value="11">11</div>
                                 </div>
                             </div>
                         </ion-col>
-                        <ion-col> <!-- set player 2 -->
+                        <ion-col class="" id="active1"> <!-- set player 2 -->
                             <div class="player2">
                                 <div class="playername" id="player2">Player 2</div>
                                 <div class="score" id="score2">72</div>
@@ -56,6 +56,8 @@
                     </ion-row>
                     <ion-row>
                         <ion-col> 
+                            <p class="info-text1"></p> <!-- Small text to guide the player -->
+                            <p class="info-text2"></p>
                             <button class="new"><span class="iconify ion-icon" data-icon="ion:add-circle-outline"></span>New game</button> <!-- New game button -->
                             <button class="roll"><span class="iconify ion-icon" data-icon="fe:loop"></span>Roll dice</button> <!-- Roll dice button -->
                             <button class="hold"><span class="iconify ion-icon" data-icon="bi:box-arrow-in-down"></span>Hold</button> <!-- stop button -->
