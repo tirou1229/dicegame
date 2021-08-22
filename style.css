@@ -82,6 +82,17 @@ ion-content{
 .activeplayer{
     background: #f7f7f7;
 }
+.activeplayer , .point {
+    font-weight: 300;
+}
+
+.point::after {
+    content: "\2022";
+    font-size: 47px;
+    /* position: absolute; */
+    color: #EB4D4D;
+    top: -7px;
+}
 
 .dice {
     position: absolute;
